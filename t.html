@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+</head>
+<style type="text/css">
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #004d40;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #e0f7fa;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #004d40;
+  color: white;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 40px 0 20px;
+  color: #004d40;
+}
+
+.content, .list-section, .contact {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content img {
+  margin-right: 20px;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.content img:hover {
+  transform: scale(1.05);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #004d40;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: #00332c;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #004d40;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  background-color: #004d40;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.footer-links a:hover {
+  background-color: #00332c;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content img {
+    margin: 0 0 20px 0;
+  }
+}
+
+</style>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="header" id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Your one-stop to learn about my achievements and experiences</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="content">
+      <img src="raya1.jpg" alt="Profile Image">
+      <p>My name is Muhammad Lokman bin Abdul Hamid, you can call me Lokman. Currently furthering my study in Diploma Computer Science at UiTM Branch Tapah, and all I can say is I'm enjoying my time here. I hope my decision for choosing this path is the right choice. That's all from me.</p>
+    </div>
+    <div class="content">
+      <img src="sun1.jpg" alt="Profile Image">
+      <p>My birthplace was Slimriver, and my upbringing was Semanggol. Although I currently reside in Kuala Kurau, many people mistakenly believe that Batu Kurau and Kuala Kurau are the same location. They are not the same at all, and this is just a snapshot taken near my house.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="list-section">
+      <p>Skill 1: [Detail your skill here]</p>
+      <p>Skill 2: [Detail your skill here]</p>
+      <p>Skill 3: [Detail your skill here]</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="list-section">
+      <p>Project 1: [Detail your project here]</p>
+      <p>Project 2: [Detail your project here]</p>
+      <p>Project 3: [Detail your project here]</p>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="list-section">
+      <p>Achievement 1: [Detail your achievement here]</p>
+      <p>Achievement 2: [Detail your achievement here]</p>
+      <p>Achievement 3: [Detail your achievement here]</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="list-section">
+      <p>Experience 1: [Detail your experience here]</p>
+      <p>Experience 2: [Detail your experience here]</p>
+      <p>Experience 3: [Detail your experience here]</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <center>
+    <h2>Contact</h2>
+    <p>Email: lokmanhamid31@gmail.com</p>
+    <p>Phone: 0113541089</p>
+    </center>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/lxmmdy?igsh=dHI0bTBpeWdhc3Rn" target="_blank" class="button">Instagram</a>
+      <a href="resume.pdf" target="_blank" class="button">Download Resume</a>
+    </div>
+    <p>&copy; 2024 Muhammad Lokman bin Abdul Hamid. All rights reserved.</p>
+  </footer>
+</body>
+</html>

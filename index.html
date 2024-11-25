@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Existing styles */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #c3c388;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      width: 100%;
+      padding: 20px 0;
+      display: flex;
+      justify-content: flex-end;
+      background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar ul {
+      display: flex;
+      list-style: none;
+    }
+    .navbar ul li {
+      margin: 0 20px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      transition: color 0.3s;
+    }
+    .navbar ul li a:hover {
+      color: #e5e5cc;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .content img {
+      margin-right: 20px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+    .content img:hover {
+      transform: scale(1.1);
+    }
+    .content ul {
+      list-style: none;
+    }
+    .content ul li p {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-family: "ABeeZee", sans-serif;
+      text-align: justify;
+    }
+    h1 {
+      text-align: center;
+      font-family: Verdana, sans-serif;
+      color: black;
+    }
+    h1.italic {
+      font-style: italic;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #77773c;
+      border: none;
+      border-radius: 15px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .button:hover {
+      background-color: #666633;
+    }
+    .button:active {
+      background-color: #666633;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #e5e5cc;
+    }
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .content img {
+        margin: 0 0 20px 0;
+      }
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Modal styles */
+    #modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+    #popup-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+      text-align: center;
+    }
+    #popup-modal h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html"><strong>Home</strong></a></li>
+      <li><a href="#p2"><strong>About Me</strong></a></li>
+      <li><a href="#p3"><strong>Feedback</strong></a></li>
+    </ul>
+  </div>
+  <br><br>
+  <h1>WELCOME TO MY HOMEPAGE</h1>
+  <br><br>
+  <section id="p2"></section><h1 class="italic">About Me</h1><br><br>
+  <section class="content">
+    <img src="raya1.jpg" alt="Profile Image">
+    <ul>
+      <li><p>My name is Muhammad Lokman bin Abdul Hamid, you can call me Lokman.
+        Currently further my study in Diploma Computer Science at UiTM Branch Tapah
+        and all can I say I'm enjoying my time here. I hope my decision for choosing this path is the right choice.
+        That all from me.</p></li>
+    </ul>
+  </section>
+  <br><br><br><br>
+  <section class="content">
+    <img src="sun1.jpg" alt="Profile Image">
+    <ul>
+      <li><p>My birthplace was Slimriver, and my upbringing was Semanggol.
+       Although I currently reside in Kuala Kurau, many people mistakenly believe that Batu Kurau and Kuala Kurau are the same location.
+       It not same at all, and this is just a snapshot taken near my house.</p></li>
+    </ul>
+  </section>
+  <br><br>
+  <section id="p3">  </section>
+    <h1>Guestbook</h1>
+    <form id="guestbook-form">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Insert your name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+        <div>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="5" placeholder="Write your comment here..." required></textarea>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="contact" name="contact" value="Yes">
+            <label for="contact">I agree to be contacted</label>
+        </div>
+        <div class="buttons">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <!-- Modal for Feedback -->
+    <div id="modal-overlay"></div>
+    <div id="popup-modal">
+        <h2 id="modal-message"></h2>
+        <button onclick="closeModal()">OK</button>
+    </div>
+
+  <footer>
+    <p>Connect with me:</p>
+    <a href="https://www.instagram.com/lxmmdy?igsh=dHI0bTBpeWdhc3Rn" target="_blank">Instagram</a>
+    <p>Email: lokmanhamid31@gmail.com</p>
+    <p>Phone: 0113541089</p>
+  </footer>
+  <script>
+    document.getElementById('guestbook-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('guestbook.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('modal-message').textContent = data.message;
+            document.getElementById('modal-overlay').style.display = 'block';
+            document.getElementById('popup-modal').style.display = 'block';
+        })
+        .catch(error => {
+            document.getElementById('modal-message').textContent = 'An error occurred!';
+            document.getElementById('modal-overlay').style.display = 'block';
+            document.getElementById('popup-modal').style.display = 'block';
+        });
+    });
+
+    function closeModal() {
+        document.getElementById('modal-overlay').style.display = 'none';
+        document.getElementById('popup-modal').style.display = 'none';
+        location.reload();
+    }
+  </script>
+</body>
+</html>
